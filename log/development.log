@@ -1,0 +1,328 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-06 17:54:23) [GET]
+
+NameError (uninitialized constant MessagesController):
+  
+
+Rendered rescues/_trace (98.7ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 17:55:15) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 17:55:36) [GET]
+
+ActionView::MissingTemplate (Missing template messages/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 17:56:13) [GET]
+
+ActionView::MissingTemplate (Missing template messages/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 17:56:16) [GET]
+
+ActionView::MissingTemplate (Missing template messages/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 17:57:12) [GET]
+Rendering messages/index
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 17:58:35) [GET]
+Rendering messages/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #2 of app/views/messages/index.html.haml:
+1: %h2 Wiadomości
+2: - @messages.each do |message|
+3:   %p= message.content
+
+    app/views/messages/index.html.haml:2:in `_run_haml_app47views47messages47index46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (106.5ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 17:59:26) [GET]
+
+NameError (uninitialized constant MessagesController::Message):
+  app/controllers/messages_controller.rb:3:in `index'
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (34.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 18:00:20) [GET]
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: messages: SELECT * FROM "messages" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: messages: SELECT * FROM "messages" ):
+  app/controllers/messages_controller.rb:3:in `index'
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (115.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (20.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMessages (20101006160222)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101006160222')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("messages")[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 18:04:59) [GET]
+  [4;35;1mMessage Load (0.4ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering messages/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/]
+  [4;36;1mMessage Create (21.2ms)[0m   [0;1mINSERT INTO "messages" ("created_at", "updated_at", "content") VALUES('2010-10-06 16:05:43', '2010-10-06 16:05:43', 'Nastepne cwiczenia w sali 119')[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 18:06:07) [GET]
+  [4;36;1mMessage Load (0.7ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering messages/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/]
+  [4;35;1mMessage Create (0.8ms)[0m   [0mINSERT INTO "messages" ("created_at", "updated_at", "content") VALUES('2010-10-06 16:06:13', '2010-10-06 16:06:13', 'Nastepne cwiczenia w sali 120')[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 18:06:15) [GET]
+  [4;35;1mMessage Load (34.9ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering messages/index
+Completed in 41ms (View: 3, DB: 35) | 200 OK [http://0.0.0.0/]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 18:22:36) [GET]
+  [4;36;1mMessage Load (0.5ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering messages/index
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-10-06 18:22:39) [GET]
+
+ActionController::UnknownAction (No action responded to new. Actions: index):
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-10-06 18:23:09) [GET]
+
+ActionView::MissingTemplate (Missing template messages/new.erb in view path app/views):
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-10-06 18:24:45) [GET]
+Rendering messages/new
+Completed in 34ms (View: 30, DB: 0) | 200 OK [http://0.0.0.0/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-10-06 18:24:54) [GET]
+Rendering messages/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-10-06 18:25:14) [GET]
+Rendering messages/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-10-06 18:25:45) [GET]
+Rendering messages/new
+Completed in 54ms (View: 50, DB: 0) | 200 OK [http://0.0.0.0/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-10-06 18:26:19) [GET]
+Rendering messages/new
+Completed in 59ms (View: 55, DB: 0) | 200 OK [http://0.0.0.0/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-10-06 18:26:26) [GET]
+Rendering messages/new
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-10-06 18:26:49) [GET]
+Rendering messages/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/messages/new]
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-10-06 18:29:32) [POST]
+  Parameters: {"commit"=>"Dodaj", "authenticity_token"=>"IwP786T4qhe38wKJOW7f3ADzlF56uJM9OkOU7Y2p8G0=", "message"=>{"content"=>"dsfdsfdsf"}}
+
+ActionController::UnknownAction (No action responded to create. Actions: index and new):
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-10-06 18:32:10) [POST]
+  Parameters: {"commit"=>"Dodaj", "authenticity_token"=>"IwP786T4qhe38wKJOW7f3ADzlF56uJM9OkOU7Y2p8G0=", "message"=>{"content"=>"dsfdsfdsf"}}
+  [4;35;1mMessage Create (0.4ms)[0m   [0mINSERT INTO "messages" ("created_at", "updated_at", "content") VALUES('2010-10-06 16:32:10', '2010-10-06 16:32:10', 'dsfdsfdsf')[0m
+Redirected to http://0.0.0.0:3002/
+Completed in 10ms (DB: 0) | 302 Found [http://0.0.0.0/messages]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 18:32:10) [GET]
+  [4;36;1mMessage Load (0.6ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering messages/index
+Completed in 72ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-10-06 18:32:14) [GET]
+Rendering messages/new
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/messages/new]
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-10-06 18:32:16) [POST]
+  Parameters: {"commit"=>"Dodaj", "authenticity_token"=>"IwP786T4qhe38wKJOW7f3ADzlF56uJM9OkOU7Y2p8G0=", "message"=>{"content"=>"1111"}}
+  [4;35;1mMessage Create (0.4ms)[0m   [0mINSERT INTO "messages" ("created_at", "updated_at", "content") VALUES('2010-10-06 16:32:16', '2010-10-06 16:32:16', '1111')[0m
+Redirected to http://0.0.0.0:3002/
+Completed in 9ms (DB: 0) | 302 Found [http://0.0.0.0/messages]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 18:32:16) [GET]
+  [4;36;1mMessage Load (0.6ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering messages/index
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-10-06 18:33:09) [GET]
+Rendering messages/new
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/messages/new]
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-10-06 18:33:10) [POST]
+  Parameters: {"commit"=>"Dodaj", "authenticity_token"=>"IwP786T4qhe38wKJOW7f3ADzlF56uJM9OkOU7Y2p8G0=", "message"=>{"content"=>""}}
+Redirected to http://0.0.0.0:3002/
+Completed in 6ms (DB: 0) | 302 Found [http://0.0.0.0/messages]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 18:33:10) [GET]
+  [4;35;1mMessage Load (0.6ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering messages/index
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-10-06 18:33:11) [GET]
+Rendering messages/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/messages/new]
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-10-06 18:33:13) [POST]
+  Parameters: {"commit"=>"Dodaj", "authenticity_token"=>"IwP786T4qhe38wKJOW7f3ADzlF56uJM9OkOU7Y2p8G0=", "message"=>{"content"=>"dsfdsf"}}
+  [4;36;1mMessage Create (0.5ms)[0m   [0;1mINSERT INTO "messages" ("created_at", "updated_at", "content") VALUES('2010-10-06 16:33:13', '2010-10-06 16:33:13', 'dsfdsf')[0m
+Redirected to http://0.0.0.0:3002/
+Completed in 10ms (DB: 0) | 302 Found [http://0.0.0.0/messages]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 18:33:13) [GET]
+  [4;35;1mMessage Load (0.7ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering messages/index
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-10-06 18:36:25) [GET]
+  [4;36;1mMessage Load (0.6ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering messages/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-10-06 18:36:26) [GET]
+Rendering messages/new
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/messages/new]
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-10-06 18:36:27) [POST]
+  Parameters: {"commit"=>"Dodaj", "authenticity_token"=>"IwP786T4qhe38wKJOW7f3ADzlF56uJM9OkOU7Y2p8G0=", "message"=>{"content"=>""}}
+Rendering messages/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/messages/new.html.haml:
+1: - form_for @message do |form|
+2:   %p= form.label :content, "Treść wiadomości"
+3:   %p= form.text_area :content
+4:   %p= form.submit "Dodaj"
+
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/messages/new.html.haml:1:in `_run_haml_app47views47messages47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/messages_controller.rb:15:in `create'
+    haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (43.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-10-06 18:36:50) [POST]
+  Parameters: {"commit"=>"Dodaj", "authenticity_token"=>"IwP786T4qhe38wKJOW7f3ADzlF56uJM9OkOU7Y2p8G0=", "message"=>{"content"=>""}}
+
+NameError (undefined local variable or method `m' for #<MessagesController:0x103333cf0>):
+  app/controllers/messages_controller.rb:12:in `create'
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (108.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-10-06 18:37:00) [POST]
+  Parameters: {"commit"=>"Dodaj", "authenticity_token"=>"IwP786T4qhe38wKJOW7f3ADzlF56uJM9OkOU7Y2p8G0=", "message"=>{"content"=>""}}
+Rendering messages/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/messages]
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-10-06 18:37:11) [POST]
+  Parameters: {"commit"=>"Dodaj", "authenticity_token"=>"IwP786T4qhe38wKJOW7f3ADzlF56uJM9OkOU7Y2p8G0=", "message"=>{"content"=>""}}
+
+ActiveRecord::RecordInvalid (Validation failed: Content can't be blank):
+  app/controllers/messages_controller.rb:12:in `create'
+  haml (2.2.17) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (37.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (unprocessable_entity)

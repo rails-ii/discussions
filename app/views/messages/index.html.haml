@@ -1,0 +1,5 @@
+%h2 Wiadomości
+- @messages.each do |message|
+  %p= message.content
+%hr
+= link_to "Nowa wiadomość", new_message_path
