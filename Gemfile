@@ -1,2 +1,2 @@
-source "gemcutter"
+source :gemcutter
 gem "haml"
